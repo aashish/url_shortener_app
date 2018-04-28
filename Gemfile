@@ -86,3 +86,4 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'jquery-validation-rails'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem "validate_url"
+gem 'browser', '2.0.3'

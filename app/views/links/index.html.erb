@@ -16,7 +16,10 @@
       <%  @top_links.each do |link| %>
         <tr>
           <td><%= link.given_url %></td>
-          <td><%= link_to "#{custom_url}/#{link.slug}", link.slug, target: '_blank' %></td>  
+          <td><%= link_to "#{custom_url}/#{link.slug}", link.slug, target: '_blank', class: 'slug' %>
+            <%= text_field_tag 'statistic[latitude]', '', class: 'latitude hidden' %>
+            <%= text_field_tag 'statistic[longitude]', '', class: 'longitude hidden' %>
+          </td>
           <td><%= link.clicks %></td>
           <td><%= link_to 'Show', link %></td>
         </tr>
@@ -24,4 +27,20 @@
     </tbody>
   </table>
 </div>
-<%=  paginate @top_links %>
+<%= paginate @top_links %>
+
+<script>
+  $(document).ready(function () {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      $('.latitude').val(position.coords.latitude);
+      $('.longitude').val(position.coords.longitude);
+    }, function () {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+
+    $('.slug').click(function (e) {
+      e.preventDefault();
+      window.open($(this).attr('href') + "?latitude=" + $('.latitude').val() + "&longitude=" + $('.latitude').val(), '_blank'); // <- This is what makes it open in a new window.);
+    });
+  });
+</script>
