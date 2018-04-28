@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -40,7 +42,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails' # testing library
-  gem 'factory_bot' # allows to create factory
+  gem 'factory_bot'
   gem 'factory_bot_rails' # allows to create factory
   gem 'database_cleaner' # cleans database after tests
   gem 'shoulda-matchers' # powerful matchers for testing models and controllers
@@ -81,4 +83,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'jquery-validation-rails'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 
