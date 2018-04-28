@@ -42,6 +42,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails' # testing library
+  gem 'rails-controller-testing'
   gem 'factory_bot'
   gem 'factory_bot_rails' # allows to create factory
   gem 'database_cleaner' # cleans database after tests
@@ -84,4 +85,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'jquery-validation-rails'
 gem 'kaminari-bootstrap', '~> 3.0.1'
-
+gem "validate_url"

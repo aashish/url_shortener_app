@@ -1,0 +1,9 @@
+$('.result').append('<p class="short_url">Your Shortened Link: <%= link_to "#{custom_url}/#{@link.slug}", @link.slug, target: "_blank" %></p>')
+$('#link_given_url').val('');
+$('.links-data').prepend('<tr>' +
+  '<td><%= @link.given_url %></td>' +
+  '<td><%= link_to "#{custom_url}/#{@link.slug}", @link.slug, target: "_blank" %></td>' +
+  '<td><%= @link.clicks %></td>' +
+  '<td><%= link_to 'Show', @link %></td>' +
+  '</tr>'
+)

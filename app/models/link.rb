@@ -3,7 +3,7 @@ class Link < ActiveRecord::Base
   paginates_per 10
 
   validates :slug, uniqueness: true, presence: true
-  validates :given_url, uniqueness: true, presence: true
+  validates :given_url, uniqueness: true, presence: true, url: true
   validates :clicks, presence: true
 
   before_validation :generate_slug
