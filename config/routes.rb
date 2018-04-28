@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get ':slug' => 'links#show'
-  resources :links, only: %i[index show create]
+  resources :links, only: %i[index show create] do
+    member do
+      get 'stats'
+    end
+  end
 
   root 'links#index'
   # The priority is based upon order of creation: first created -> highest priority.
