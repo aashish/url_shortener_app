@@ -47,7 +47,7 @@ RSpec.describe LinksController, type: :controller do
   describe 'GET show' do
     it 'should show url info using slug' do
       link = create(:link)
-      get :show, :params => {"slug" => link.slug}
+      get :show, :params => {:slug => link.slug}
       expect(assigns(:link).clicks).to eq(2)
     end
   end
