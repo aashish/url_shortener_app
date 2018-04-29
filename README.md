@@ -1,5 +1,7 @@
 # Url Shortener
 
+<img src="https://travis-ci.org/aashish/url_shortener_app.svg?branch=master" alt="Build Status" />
+
 Url Shortener is a Web application using Ruby on Rails 5.x. This application will shorten the provided url. This app also provides stats of users who used the shortened url such as location, browser, etc
 
 ## Usage
