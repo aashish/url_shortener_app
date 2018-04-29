@@ -29,7 +29,7 @@ This project is using `Rspec` implementation for tests.
 
 
 
-Live demo application is at https://url-shortener-app.herokuapp.com/
+Live demo application is at https://url-shortener-plus.herokuapp.com/
 
 ## Todo
 
